@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de IP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="app">
+
+    <h1>GENERADOR DE IP</h1>
+
+    <!-- PARTE SUPERIOR -->
+    <section class="superior">
+
+      <!-- PANEL CLASE DE IP -->
+      <div class="panel panel-clase">
+        <h2>SELECCIONE LA CLASE DE LA IP</h2>
+
+        <div class="opciones">
+          <label>
+            <input type="radio" name="clase" value="A">
+            CLASE A
+          </label>
+
+          <label>
+            <input type="radio" name="clase" value="B">
+            CLASE B
+          </label>
+
+          <label>
+            <input type="radio" name="clase" value="C">
+            CLASE C
+          </label>
+        </div>
+
+        <h3>INICIA</h3>
+        <div class="cajas-rango">
+          <input id="ini1" type="text" disabled>
+          <input id="ini2" type="text" disabled>
+          <input id="ini3" type="text" disabled>
+          <input id="ini4" type="text" disabled>
+        </div>
+
+        <h3>TERMINA</h3>
+        <div class="cajas-rango">
+          <input id="fin1" type="text" disabled>
+          <input id="fin2" type="text" disabled>
+          <input id="fin3" type="text" disabled>
+          <input id="fin4" type="text" disabled>
+        </div>
+      </div>
+
+      <!-- PANEL INGRESAR IP -->
+      <div class="panel panel-ip">
+        <h2>INGRESE LA IP INICIAL</h2>
+
+        <div class="cajas-ip">
+          <input class="octeto" id="o1" type="text" maxlength="3" disabled>
+          <input class="octeto" id="o2" type="text" maxlength="3" disabled>
+          <input class="octeto" id="o3" type="text" maxlength="3" disabled>
+          <input class="octeto" id="o4" type="text" maxlength="3" disabled>
+        </div>
+
+        <div class="validar-area">
+          <button id="validar" disabled class="btn-accion btn-validar">
+            <span class="icon">✓</span>
+            <span class="texto">VERIFICAR IP</span>
+          </button>
+
+          <label for="cantidad">
+            CUANTAS IP<br>
+            A GENERAR
+          </label>
+
+          <input id="cantidad" type="text" maxlength="4" disabled>
+        </div>
+      </div>
+
+      <!-- PANEL DIRECCIÓN IP -->
+      <div class="panel panel-direccion">
+        <h2>DIRECCIÓN IP</h2>
+
+        <input id="direccionIP" type="text" disabled>
+        <input id="mascaraIP" type="text" disabled>
+        <input id="claseIP" type="text" disabled>
+      </div>
+
+    </section>
+
+    <!-- PARTE INFERIOR -->
+    <section class="inferior">
+
+      <!-- TABLA DE RESULTADOS -->
+      <div class="panel panel-tabla">
+        <div class="tabla">
+
+          <div>
+            <h3>NÚMERO</h3>
+            <textarea id="listaNumero" readonly></textarea>
+          </div>
+
+          <div>
+            <h3>SUBRED</h3>
+            <textarea id="listaSubred" readonly></textarea>
+          </div>
+
+          <div>
+            <h3>PRIMERA IP VÁLIDA</h3>
+            <textarea id="listaPrimera" readonly></textarea>
+          </div>
+
+          <div>
+            <h3>ULTIMA IP VÁLIDA</h3>
+            <textarea id="listaUltima" readonly></textarea>
+          </div>
+
+          <div>
+            <h3>MÁSCARA DE SUBRED</h3>
+            <textarea id="listaMascara" readonly></textarea>
+          </div>
+
+          <div>
+            <h3>BROADCAST</h3>
+            <textarea id="listaBroadcast" readonly></textarea>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- BOTONES -->
+      <div class="botonera">
+
+        <button id="generar" disabled class="btn-accion">
+          <span class="icon">⤴</span>
+          <span class="texto">GENERAR</span>
+        </button>
+
+        <button id="borrar" disabled class="btn-accion">
+          <span class="icon">✕</span>
+          <span class="texto">BORRAR</span>
+        </button>
+
+        <button id="salir" class="btn-accion">
+          <span class="icon">↩</span>
+          <span class="texto">SALIR</span>
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

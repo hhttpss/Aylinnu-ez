@@ -1,0 +1,334 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  overflow: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background:
+    radial-gradient(circle at 8% 18%, rgba(95, 60, 35, 0.22) 0 12%, transparent 13%),
+    radial-gradient(circle at 94% 82%, rgba(92, 56, 32, 0.26) 0 14%, transparent 15%),
+    radial-gradient(circle at 74% 7%, rgba(96, 58, 36, 0.18) 0 16%, transparent 17%),
+    linear-gradient(135deg, #fff6e8, #efd2ab 55%, #fff2de);
+  background-attachment: fixed;
+}
+
+/* CONTENEDOR */
+.app {
+  width: 1020px;
+  margin: 0 auto;
+  padding: 22px 0 28px;
+}
+
+/* TITULO */
+h1 {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 48px;
+  letter-spacing: 3px;
+  color: #ff94ef;
+  text-shadow:
+    2px 2px 0 white,
+    4px 4px 0 rgba(120, 70, 110, 0.22);
+  margin-bottom: 22px;
+}
+
+/* PARTE SUPERIOR */
+.superior {
+  display: grid;
+  grid-template-columns: 420px 300px 200px;
+  gap: 14px;
+  align-items: start;
+}
+
+/* PARTE INFERIOR */
+.inferior {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 735px 200px;
+  gap: 14px;
+  align-items: start;
+}
+
+/* PANELES */
+.panel {
+  background: rgba(255, 218, 182, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.96);
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(80, 50, 30, 0.14);
+  padding: 14px;
+  overflow: hidden;
+}
+
+.panel-clase,
+.panel-ip,
+.panel-direccion {
+  min-height: 250px;
+}
+
+.panel h2 {
+  font-size: 18px;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 14px;
+  line-height: 1.15;
+}
+
+.panel h3 {
+  font-size: 17px;
+  font-weight: 900;
+  margin: 10px 0 6px;
+  line-height: 1;
+}
+
+/* OPCIONES DE CLASE */
+.opciones {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.opciones label {
+  height: 38px;
+  background: rgba(245, 147, 185, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 800;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  white-space: nowrap;
+  transition: 0.2s;
+}
+
+.opciones label:hover {
+  background: rgba(237, 125, 170, 0.98);
+  transform: translateY(-1px);
+}
+
+.opciones input {
+  width: 13px;
+  height: 13px;
+  accent-color: #666;
+}
+
+/* INPUTS */
+input,
+textarea {
+  width: 100%;
+  min-width: 0;
+  background: #dedede;
+  border: 1px solid #8d8d8d;
+  color: #333;
+  font-size: 14px;
+  outline: none;
+  border-radius: 6px;
+}
+
+input {
+  height: 32px;
+  padding: 5px 8px;
+}
+
+textarea {
+  resize: none;
+  height: 140px;
+  padding: 8px;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+input:focus {
+  border-color: #ff8de6;
+  box-shadow: 0 0 0 3px rgba(255, 141, 230, 0.18);
+}
+
+input:disabled,
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* RANGOS */
+.cajas-rango {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.cajas-rango input {
+  height: 32px;
+}
+
+/* INGRESAR IP */
+.cajas-ip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 14px 0 18px;
+}
+
+.octeto {
+  text-align: center;
+}
+
+/* AREA VALIDAR */
+.validar-area {
+  display: grid;
+  grid-template-columns: 110px 1fr 70px;
+  gap: 12px;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.validar-area label {
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.08;
+  color: white;
+}
+
+#cantidad {
+  width: 70px;
+  height: 32px;
+  justify-self: end;
+  text-align: center;
+}
+
+/* DIRECCION IP */
+.panel-direccion input {
+  margin-bottom: 12px;
+}
+
+/* TABLA */
+.panel-tabla {
+  min-height: 225px;
+  padding: 14px 18px 18px;
+}
+
+.tabla {
+  display: grid;
+  grid-template-columns: 55px 110px 110px 110px 110px 110px;
+  gap: 16px;
+  align-items: start;
+}
+
+.tabla > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.tabla h3 {
+  min-height: 32px;
+  color: white;
+  font-size: 11px;
+  text-align: center;
+  font-weight: 900;
+  margin-bottom: 7px;
+  line-height: 1.1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tabla div:nth-child(2) h3 {
+  font-size: 19px;
+}
+
+/* BOTONES */
+.btn-accion {
+  background: linear-gradient(180deg, #fffbe0 0%, #f4efc5 100%);
+  border: 1px solid #a8a08a;
+  color: #6a5c41;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(80, 50, 30, 0.12);
+  transition: 0.2s;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-accion:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(80, 50, 30, 0.16);
+}
+
+.btn-accion .icon {
+  font-size: 28px;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.btn-accion .texto {
+  font-size: 11px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+
+/* BOTON VALIDAR */
+.btn-validar {
+  width: 110px;
+  height: 88px;
+}
+
+.btn-validar .icon {
+  font-size: 24px;
+}
+
+.btn-validar .texto {
+  font-size: 10px;
+}
+
+/* BOTONERA DERECHA */
+.botonera {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  justify-items: center;
+  align-content: start;
+}
+
+.botonera .btn-accion {
+  width: 95px;
+  height: 95px;
+}
+
+#salir {
+  grid-column: 1 / span 2;
+  width: 110px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1050px) {
+  .app {
+    width: 95%;
+  }
+
+  .superior,
+  .inferior {
+    grid-template-columns: 1fr;
+  }
+
+  .tabla {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .botonera {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #salir {
+    grid-column: auto;
+  }
+}
